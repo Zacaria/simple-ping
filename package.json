@@ -1,0 +1,15 @@
+{
+  "name": "ping",
+  "version": "1.0.0",
+  "description": "ping havesomecode",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zacaria/simple-ping.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zacaria",
+  "license": "Apache-2.0"
+}
