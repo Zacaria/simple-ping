@@ -1,0 +1,7 @@
+{
+  "site": "https://www.havesomecode.io",
+  "retry": {
+    "delay": 10000,
+    "attempts": 5
+  }
+}

@@ -1,15 +1,14 @@
-var axios = require('axios');
-var sendmail = require('sendmail')();
-var site = 'https://www.havesomecode.io';
+import config from './config.json';
+import request from './utils/request';
 
-axios.get(site)
-.then(function(response){})
-.catch(function(error) {
-  sendmail({
-    from: 'noreply@havesomecode.io',
-    to: 'cv.chtatarz@gmail.com',
-    subject: 'Havesomecode is down',
-    html: 'Problem with ' + site + '<br/>' +
-         'Message :' + error.message.toString()
-  });
-});
+const site = config.site;
+const TRY_ATTEMPTS = config.retry.attempts;
+const TRY_DELAY = config.retry.delay;
+
+const failSite = 'https://www.havesomecode.o';
+
+console.log('Running process in', process.env.NODE_ENV, 'mode');
+
+request(site, TRY_DELAY, TRY_ATTEMPTS);
+
+
