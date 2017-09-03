@@ -4,7 +4,7 @@ const sendmail = sendmailFunc();
 
 const sendMail = error => {
   console.log('Sending mail ! ');
-  if(process.env.NODE_ENV === 'production') {
+  if (process.env.NODE_ENV === 'production') {
     sendmail({
       from: 'noreply@havesomecode.io',
       to: 'cv.chtatarz@gmail.com',
