@@ -1,0 +1,8 @@
+// Insert config here
+{
+  "site": "https://www.somesite.com",
+  "retry": {
+    "delay": 100,
+    "attempts": 2
+  }
+}

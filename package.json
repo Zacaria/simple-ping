@@ -9,12 +9,14 @@
   },
   "scripts": {
     "dev": "NODE_ENV=development nodemon --exec babel-node -- ./index.js",
-    "prod": "NODE_ENV=production babel-node -- ./index.js"
+    "prod": "NODE_ENV=production babel-node -- ./index.js",
+    "forever": "NODE_ENV=production forever start --minUptime 5000 --spinSleepTime 10 -f -c \"babel-node \" ./index.js"
   },
   "author": "Zacaria",
   "license": "Apache-2.0",
   "dependencies": {
     "axios": "^0.16.2",
+    "forever": "^0.15.3",
     "sendmail": "^1.1.1",
     "winston": "^2.3.1",
     "winston-logrotate": "^1.2.0"
