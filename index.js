@@ -1,6 +1,7 @@
 import config from './config.json';
 import request from './utils/request';
 
+// throw
 if(!Array.isArray(config)) {
   console.error('Error, please specify a config as an array of sites !');
 
